@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Courier Prime", monospace;
 }
 body{
     background: #edeaff;
@@ -19,4 +21,10 @@ body{
     margin: 200px auto 0;
     box-shadow: 0 10px 10px rgba(0,0,0,0.2);
 
+}
+
+.container .timer{
+    margin: 50px 0;
+    font-size: 64px;
+    font-weight: 300;
 }
