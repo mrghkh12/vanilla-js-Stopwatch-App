@@ -28,3 +28,17 @@ body{
     font-size: 64px;
     font-weight: 300;
 }
+
+.container .ctrlBtns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .ctrlBtns img{
+    width: 50px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.container .ctrlBtns img:nth-child(2){
+    width: 80px;
+}
