@@ -4,21 +4,23 @@ let [soconds, minutes, hours] = [0,0,0];
 let timerElem = $.querySelector('.timer')
 let ctrlBtns = $.querySelector('.ctrlBtns')
 let timeOut = null
+let isRun = false
 
 ctrlBtns.addEventListener('click', e => {
     if(e.target.src){
         if(e.target.src.includes('start')){
             stsrtTimer()
         }else if(e.target.src.includes('stop')){
-            console.log('stop');
+            stopTimer()
         }else if(e.target.src.includes('reset')){
-            console.log('reset');
+            resetTimer()
         }
     }
 })
 
 function stsrtTimer(){
-    if(soconds === 0){
+    if(!isRun){
+        isRun = true
         timeOut = setInterval(()=>{
             soconds++
             if(soconds == 60) soconds=0 , minutes++;
@@ -31,4 +33,16 @@ function stsrtTimer(){
             timerElem.innerHTML = hoursStr + ':' + minutesStr + ':' + socondsStr
         }, 1000)
     }
+}
+
+function stopTimer(){
+    clearInterval(timeOut)
+    isRun = false
+}
+
+function resetTimer(){
+    [soconds, minutes, hours] = [0,0,0];
+    clearInterval(timeOut)
+    timerElem.innerHTML = '00:00:00';
+    isRun = false
 }
