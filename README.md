@@ -1,1 +1,1 @@
-# Stopwatch App
+# vanilla js - Stopwatch App
