@@ -45,7 +45,15 @@ body{
     width: 50px;
     margin: 0 20px;
     cursor: pointer;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.container .ctrlBtns img:hover{
+    box-shadow: 0 0 5px 0 #9c9c9c;
 }
 .container .ctrlBtns img:nth-child(2){
     width: 80px;
+}
+.container .ctrlBtns img:nth-child(2):hover{
+    box-shadow: 0 0 10px 0 #FF5636;
 }
