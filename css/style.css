@@ -15,7 +15,6 @@ body{
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../images/background.png);
     background-size: cover;
     background-position: center;
-    text-align: center;
     padding: 40px 0;
     color: #fff;
     margin: 200px auto 0;
@@ -24,16 +23,18 @@ body{
 }
 
 .container .timer{
-    margin: 50px 0;
+    width: max-content;
+    margin: 50px auto;
     font-size: 64px;
     font-weight: 300;
     position: relative;
+    padding: 0 10px;
 }
 .container .timer .milSec{
     position: absolute;
     font-size: 18px;
     bottom: -5px;
-    right: 130px;
+    right: -5px;
 }
 
 .container .ctrlBtns{
@@ -45,7 +46,23 @@ body{
     width: 50px;
     margin: 0 20px;
     cursor: pointer;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.container .ctrlBtns img:hover{
+    box-shadow: 0 0 5px 0 #9c9c9c;
 }
 .container .ctrlBtns img:nth-child(2){
     width: 80px;
+}
+.container .ctrlBtns img:nth-child(2):hover{
+    box-shadow: 0 0 10px 0 #FF5636;
+}
+@media screen and (max-width: 400px) {
+    .container .timer{
+        font-size: 48px;
+    }
+    .container .ctrlBtns img{
+        margin: 0 10px;
+    }
 }
